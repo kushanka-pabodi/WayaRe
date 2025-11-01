@@ -96,12 +96,18 @@ Memory footprint is dominated by the embedding index (text OOD) and tree ensembl
 
 ## 7) Implementation Notes 
 
-**Supported Libraries:** pandas, scikit-learn, joblib
-**Input Data:** Parquet file (features_ingestion.parquet) containing numerical document features
-**Preprocessing:** Standardization using StandardScaler
-**Model:** IsolationForest (n_estimators=300, contamination=0.01, random_state=42)
-**Output Model:** Trained pipeline saved as models/iforest_ingestion.joblib
-**Purpose:** Detect anomalies or outliers in document feature data
+-**Supported Libraries:** pandas, scikit-learn, joblib.
+
+-**Input Data:** Parquet file (features_ingestion.parquet) containing numerical document features.
+
+-**Preprocessing:** Standardization using StandardScaler.
+
+-**Model:** IsolationForest (n_estimators=300, contamination=0.01, random_state=42).
+
+-**Output Model:** Trained pipeline saved as models/iforest_ingestion.joblib.
+
+-**Purpose:** Detect anomalies or outliers in document feature data.
+
 **Example:**
 ### Training — IsolationForest (scikit‑learn)
 ```python
